@@ -27,6 +27,20 @@ $recentlyViewed = array_unique($recentlyViewed);
 $recentlyViewed = array_slice($recentlyViewed, 0, 5);
 // Save the updated list back to the cookie
 setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"); // Cookie will expire after 30 days
+
+// Average Rating 
+// Assuming $productID contains the ID of the current product
+require_once '../../db_connection.php';
+$avgRatingQuery = "SELECT AVG(rating) as average_rating FROM product_reviews WHERE product_id = $productID";
+$avgResult = $link->query($avgRatingQuery);
+
+if ($avgResult) {
+    $avgRow = $avgResult->fetch_assoc();
+    $averageRating = round($avgRow['average_rating'], 1); // Round to one decimal place
+} else {
+    $averageRating = "No Ratings";
+}
+$link->close();
 ?>
 
 <!DOCTYPE html>
@@ -46,10 +60,39 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <div class="product">
     <img src="../images/ghostOfTsushima.jpeg" alt="Ghost of Tsushima Cover Art">
     <h2>Ghost of Tsushima</h2>
+    <h4>Rating: <?php echo $averageRating; ?></h4>
     <p>Take control of Jin Sakai, a samurai, in the invasion of Japan by the Mongol Empire in 1274 that began on the Island of Tsushima. 
         A disastrous battle against the invaders quickly teaches him that perhaps the honorable but restrictive ways of the samurai code 
         might not be enough to deal with this new and existential threat.</p>
-    <button class="buy-now">Buy Now</button>
+    <button class="button">Buy Now</button>
+    <br><br><br>
+    <button class = "button" onclick="showReviews()">Show Reviews</button>
+    <div class="review-section">
+    <h3>Add Your Review</h3>
+    <form action="../submit_review.php" method="post">
+        <input type="hidden" name="product_id" value="<?php echo $productID; ?>">
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
+        </select>
+        <br><br>
+        <label for="review">Review:</label>
+        <br>
+        <textarea name="review" id="review" required></textarea>
+        <br><br>
+        <button class="button" type="submit">Submit Review</button>
+    </form>
+</div>
 </div>
 </body>
+<script>
+function showReviews() {
+    // Logic to display reviews - this could be a redirection to a new page or a pop-up
+    window.location.href = '../reviews.php?product_id=' + <?php echo $productID; ?>;
+}
+</script>
 </html>

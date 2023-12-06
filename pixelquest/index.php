@@ -28,6 +28,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     <br><br>
     <p>The best place to purchase video games online</p>
     <br><br><br>
+    <button class="button" onclick="location.href='../index.php';">Return</button>
   </div>
 
   <div id="About" class="tabcontent">
