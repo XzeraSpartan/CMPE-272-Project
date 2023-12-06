@@ -62,9 +62,12 @@ $recentlyViewed = isset($_COOKIE[$cookieName]) ? explode(',', $_COOKIE[$cookieNa
 <h2>Most Visited Services</h2>
 <?php
 foreach ($top5MostViewed as $productID => $viewCount) {
-    echo '<li>' . $products[$productID] . ' (Views: ' . $viewCount . ')</li>';
+    if ($viewCount >= 1) {
+        echo '<li>' . $products[$productID] . ' (Views: ' . $viewCount . ')</li>';
+    }
 }
 ?>
+
 </div>
 <div>
 <h2>Last Visited Services</h2>
