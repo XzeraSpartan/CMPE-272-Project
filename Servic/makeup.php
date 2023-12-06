@@ -1,4 +1,35 @@
+<?php
+session_start();
 
+// Check if user is logged in
+if (!isset($_SESSION['userid'])) {
+    header('Location: /login.php');
+    exit();
+}
+
+$productID = 8;
+
+// MOST VIEWED COOKIE
+
+$mostViewedCookieName = 'product_view_count_' . $productID . '_' . md5($_SESSION['userid']);
+$currentCount = isset($_COOKIE[$mostViewedCookieName]) ? intval($_COOKIE[$mostViewedCookieName]) : 0;
+setcookie($mostViewedCookieName, $currentCount + 1, time() + (86400 * 30), "/");
+
+// RECENTLY VIEWED COOKIE
+// Construct the cookie name based on the user ID
+$cookieName = 'recently_viewed_' . md5($_SESSION['userid']);
+// Read the recently viewed products from the user-specific cookie
+$recentlyViewed = isset($_COOKIE[$cookieName]) ? explode(',', $_COOKIE[$cookieName]) : [];
+// Add the current product to the start of the list
+array_unshift($recentlyViewed, $productID);
+// Remove duplicates
+$recentlyViewed = array_unique($recentlyViewed);
+// Ensure we only store the top 5
+$recentlyViewed = array_slice($recentlyViewed, 0, 5);
+// Save the updated list back to the cookie
+setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"); // Cookie will expire after 30 days
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,35 +48,6 @@
     <a href="#" class="booking-button">Book Now</a>
 </div>
 </div>
-
-    <?php
-    // Cookie handling code
-    $cookie_name = 'recently_visited';
-    $current_service = basename(__FILE__, '.php'); // Get the current file name without extension
-
-    // Check if the cookie exists
-    if(isset($_COOKIE[$cookie_name])) {
-        $recently_visited = explode(',', $_COOKIE[$cookie_name]);
-
-        // If current service is already in the array, remove it
-        if(($key = array_search($current_service, $recently_visited)) !== false) {
-            unset($recently_visited[$key]);
-        }
-
-        // Prepend the current service to the beginning of the array
-        array_unshift($recently_visited, $current_service);
-
-        // Store only the last 5 services
-        $recently_visited = array_slice($recently_visited, 0, 5);
-
-        // Update the cookie
-        setcookie($cookie_name, implode(',', $recently_visited), time() + (86400 * 30), "/"); // 86400 = 1 day
-    } else {
-        // Cookie doesn't exist, create a new one with the current service
-        setcookie($cookie_name, $current_service, time() + (86400 * 30), "/"); // 86400 = 1 day
-    }
-    ?>
-
     <?php include 'footer.php'; ?>
 </body>
 </html>

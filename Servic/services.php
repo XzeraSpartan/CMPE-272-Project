@@ -1,3 +1,51 @@
+<?php
+
+session_start();
+
+// Ensure the user is logged in
+if (!isset($_SESSION['userid'])) {
+    header('Location: /login.php');
+    exit();
+}
+
+
+$products = [
+    0 => 'Ac Service',
+    1 => 'Wash Service',
+    2 => 'Refrigerator Service',
+    3 => 'Plumbing Service',
+    4 => 'Electricity Service',
+    5 => 'Washroom Cleaning',
+    6 => 'House Cleaning',
+    7 => 'Hair Cutting',
+    8 => 'Makeup',
+    9 => 'Massage',
+    10 => 'Vehicle Service',
+    11 => 'Flat Tyre',
+    12 => 'Vehicle Towing',
+    13 => 'Vehicle AC Repair',
+    
+    // ... up to Product 10
+];
+
+// MOST VIEWED
+$viewCounts = [];
+foreach ($products as $productID => $productName) {
+    $cookieName = 'product_view_count_' . $productID . '_' . md5($_SESSION['userid']);
+    $viewCounts[$productID] = isset($_COOKIE[$cookieName]) ? intval($_COOKIE[$cookieName]) : 0;
+}
+
+arsort($viewCounts);
+$top5MostViewed = array_slice($viewCounts, 0, 5, true);
+
+// Construct the cookie name based on the user ID
+$cookieName = 'recently_viewed_' . md5($_SESSION['userid']);
+
+
+// Read the recently viewed products from the user-specific cookie
+$recentlyViewed = isset($_COOKIE[$cookieName]) ? explode(',', $_COOKIE[$cookieName]) : [];
+?>
+
 
 <!DOCTYPE html>
 
@@ -10,17 +58,23 @@
 <?php include 'header.php'; ?>
 <?php if (isset($_COOKIE['recently_visited'])): ?>
 <div class="recently-visited">
+<h2>Most Visited Services</h2>
+<ul>
+<?php
+foreach ($top5MostViewed as $productID => $viewCount) {
+    echo '<li>' . $products[$productID] . ' (Views: ' . $viewCount . ')</li>';
+}
+?>
+
 <h2>Last Visited Services</h2>
 <ul>
 <?php
-            $recently_visited = explode(',', $_COOKIE['recently_visited']);
-            foreach ($recently_visited as $service_file) {
-                // Convert the filename into a more readable format, e.g. ac_service => AC Service
-                $service_name = str_replace('_', ' ', basename($service_file, '.php'));
-                $service_name = ucwords($service_name);
-                echo "<li><a href='{$service_file}.php'>{$service_name}</a></li>";
-            }
-            ?>
+foreach ($recentlyViewed as $productID) {
+    echo '<li>' . $products[$productID] . '</li>';
+}
+?>
+
+</div>
         </ul>
 </div>
 <?php endif; ?>

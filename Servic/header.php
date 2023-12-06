@@ -8,6 +8,5 @@
     <a href="services.php">Services</a>
     <a href="news.php">News</a>
     <a href="contact.php">Contact</a>
-    <a href="secure.php">Admin Login</a>
-
+    <a href="curl.php">Users</a>
 </div>
