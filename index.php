@@ -1,3 +1,9 @@
+<?php
+session_start();
+// Check if user is logged in
+$is_logged_in = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+$is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true;
+?>
 
 <!DOCTYPE html>
 <html>
@@ -18,8 +24,14 @@
         <h1>Welcome to the Online Marketplace</h1>
     </div>
     <div class="nav">
-        <a href="login.php">Login</a>
-        <a href="register.html">Register</a>
+    <?php if ($is_logged_in || $is_admin_logged_in): ?>
+        <!-- Display Logout Button for logged-in users -->
+        <button class="button" onclick="location.href='logout.php';">Log out</button>
+    <?php else: ?>
+        <!-- Display Sign In Button for guests -->
+        <button class="button" onclick="location.href='login.php';">Log in</button>
+    <?php endif; ?>
+    <button class="button" onclick="location.href='register.html';">register</button>
     </div>
     <div class="main">
         <div class="card">
