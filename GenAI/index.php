@@ -142,47 +142,14 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
             <?php include 'contacts.php'; ?>
     </section>
     
-<section id="register">
-    <h2>Register</h2>
-    <form action="register.php" method="POST" autocomplete="off">
-    <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
-    <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
-    <input type="email" name="email" id ="email" placeholder="email address" required>
-    <input type="password" name="password" id="password" placeholder="Password" required><br><br>
-    <input type="text" name="home_phone" id="home_phone" placeholder="Home Phone Number" required>
-    <input type="text" name="cell_phone" id="cell_phone" placeholder="Mobile Phone Number" required><br><br>
-    <input type="text" name="home_address" id="home_address" placeholder="Home Address" required><br><br>
-    <br>
-    <input type="submit" value="Register">
-  </form>
-</section>
 
-<section id="login">
 
-    <h2>Login</h2>
-    <form action="login.php" method="post">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
-        
-        <input type="submit" value="Login">
-    </form>
-</section>
 
-<section id="logout">
-
-    <h2>Logout</h2>
-    <form action="logout.php" method="post">
-        <input type="submit" value="logout">
-    </form>
-</section>
 
 <section id="search">
     <h2>Search Users</h2>
     <button class="button" onclick="location.href='curl.php';">View All Users</button>
-    <form action="search_db.php" method="POST">
+    <form action="/search_db.php" method="POST">
     <label><input type="first_name" name="first_name" placeholder="first name"></label>
     <label><input type="last_name" name="last_name" placeholder="last name"></label>
     <label><input type="email" name="email" placeholder="email address"></label>
