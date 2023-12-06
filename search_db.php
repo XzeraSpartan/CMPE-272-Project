@@ -1,5 +1,5 @@
 <?php 
-require_once '/db_connection.php';
+require_once 'db_connection.php';
 
 if ($_SERVER["REQUEST_METHOD"]=="POST") {
     // Initialize the query with a base SELECT statement
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $result = $stmt->get_result();
     
     if ($result->num_rows === 0) {
-        echo "<script>alert('no user found'); window.location.href = '/pixelquest/search_users.php';</script>";
+        echo "<script>alert('no user found'); window.location.href = 'search_users.php';</script>";
     } else {
         while ($row = $result->fetch_assoc()) {
             echo "User: " . htmlspecialchars($row['first_name']) . " " . htmlspecialchars($row['last_name']) . "<br> Email: " . htmlspecialchars($row['email']) . "<br> Home Phone: " . htmlspecialchars($row['home_phone']) . "<br> Mobile Phone: " . htmlspecialchars($row['cell_phone']) . "<br> Home Address: " . htmlspecialchars($row['home_address']) . "<br><br>";

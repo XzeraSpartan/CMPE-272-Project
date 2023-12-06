@@ -3,7 +3,7 @@ session_start();
 
 // Check if the admin is logged in, if not redirect to login page
 if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
-    header('Location: /login.php');
+    header('Location: login.php');
     exit();
 }
 ?>
