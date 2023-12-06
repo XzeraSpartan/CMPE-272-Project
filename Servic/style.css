@@ -236,3 +236,9 @@ table th {
 .table-container {
     padding: 0 20px;
 }
+
+
+.recentmost{
+    display: flex;
+    justify-content: space-between;
+}

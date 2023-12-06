@@ -57,25 +57,24 @@ $recentlyViewed = isset($_COOKIE[$cookieName]) ? explode(',', $_COOKIE[$cookieNa
 <body>
 <?php include 'header.php'; ?>
 <?php if (isset($_COOKIE['recently_visited'])): ?>
-<div class="recently-visited">
-<h2>Most Visited Services</h2>
-<ul>
-<?php
-foreach ($top5MostViewed as $productID => $viewCount) {
-    echo '<li>' . $products[$productID] . ' (Views: ' . $viewCount . ')</li>';
-}
-?>
 
-<h2>Last Visited Services</h2>
-<ul>
-<?php
-foreach ($recentlyViewed as $productID) {
-    echo '<li>' . $products[$productID] . '</li>';
-}
-?>
-
-</div>
-        </ul>
+<div class="recentmost">
+    <div>
+        <h2>Most Visited Services</h2>
+        <?php
+            foreach ($top5MostViewed as $productID => $viewCount) {
+                    echo '<li>' . $products[$productID] . ' (Views: ' . $viewCount . ')</li>';
+            }
+        ?>
+    </div>
+    <div>
+        <h2>Last Visited Services</h2>
+        <?php
+            foreach ($recentlyViewed as $productID) {
+            echo '<li>' . $products[$productID] . '</li>';
+        }
+        ?>
+    </div>
 </div>
 <?php endif; ?>
 <div class="container">
