@@ -3,7 +3,7 @@ session_start();
 
 // Check if user is logged in
 if (!isset($_SESSION['userid'])) {
-    header('Location: /genai/index.php');
+    header('Location: /login.php');
     exit();
 }
 
