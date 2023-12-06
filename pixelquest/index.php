@@ -28,13 +28,6 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     <br><br>
     <p>The best place to purchase video games online</p>
     <br><br><br>
-    <?php if ($is_logged_in || $is_admin_logged_in): ?>
-        <!-- Display Logout Button for logged-in users -->
-        <button class="button" onclick="location.href='logout.php';">Log out</button>
-    <?php else: ?>
-        <!-- Display Sign In Button for guests -->
-        <button class="button" onclick="location.href='login.php';">Log in</button>
-    <?php endif; ?>
   </div>
 
   <div id="About" class="tabcontent">
