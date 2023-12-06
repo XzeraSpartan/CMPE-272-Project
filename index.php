@@ -49,6 +49,9 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
         <button class="button" onclick="location.href='login.php';">Log in</button>
     <?php endif; ?>
         <button class="button" onclick="location.href='register.html';">register</button>
+        <button class="button" onclick="location.href='track.php';" style="width: 250px;">Recently Visited Website</button>
+        <button class="button" onclick="location.href='global_recently_viewed.php';" style="width: 250px;">Recently Visited Product</button>
+        <button class="button" onclick="location.href='global_most_viewed.php';" style="width: 250px;">Most Visited Product</button>
     </div>
     <div class="main">
         <div class="card">
