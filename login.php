@@ -15,7 +15,7 @@ if ($is_logged_in) {
   <meta charset="UTF-8">
   <title>Pixel Quest Games Admin Login</title>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="pixelquest/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <style>
       *{
@@ -33,7 +33,7 @@ if ($is_logged_in) {
 <body>
 <div class="topnav">
     <a href="index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+      <img src="pixelquest/images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Log in</h2>
 </div>

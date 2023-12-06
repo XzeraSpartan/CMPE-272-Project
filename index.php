@@ -18,8 +18,8 @@
         <h1>Welcome to the Online Marketplace</h1>
     </div>
     <div class="nav">
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
+        <a href="login.php">Login</a>
+        <a href="register.html">Register</a>
     </div>
     <div class="main">
         <div class="card">
