@@ -178,7 +178,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     document.getElementById(pageName).style.display = "block";
 }
 
-// Get the element with id="defaultOpen" and click on it
+// Get the element with id="defaultOpen" and click on it you
     document.getElementById("defaultOpen").click();
   </script>
     
