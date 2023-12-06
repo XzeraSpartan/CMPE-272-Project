@@ -32,7 +32,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
                     display: inline-block;
                 }
         .main { padding: 20px; }
-        .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card { background: white; text-align: center; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .footer { background-color: #333; color: white; text-align: center; padding: 10px 0; margin-top: 30px; }
     </style>
 </head>
