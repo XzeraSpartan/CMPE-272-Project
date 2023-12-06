@@ -25,17 +25,17 @@
         <div class="card">
             <h2>PixelQuest</h2>
             <p>Description of PixelQuest...</p>
-            <a href="/pixelquest/index.php">Visit PixelQuest</a>
+            <a href="pixelquest/index.php">Visit PixelQuest</a>
         </div>
         <div class="card">
             <h2>Servic</h2>
             <p>Description of Servic...</p>
-            <a href="/servic/index.php">Visit Servic</a>
+            <a href="servic/index.php">Visit Servic</a>
         </div>
         <div class="card">
             <h2>Gen AI Wear</h2>
             <p>Description of Gen AI Wear...</p>
-            <a href="/GenAI/index.php">Visit Gen AI Wear</a>
+            <a href="GenAI/index.php">Visit Gen AI Wear</a>
         </div>
     </div>
     <div class="footer">
