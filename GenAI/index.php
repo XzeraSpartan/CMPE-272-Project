@@ -62,66 +62,66 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
             <h3>Hoodies</h3>
             <div id="product-details">
             <div class="product-grid">
-                <div class="product-item" data-product-id="1" href="/products/product1.php">
-                    <a href="products/product1.php">
+                <div class="product-item" data-product-id="21" href="/products/product21.php">
+                    <a href="products/product21.php">
                     <img src="images/neon_dream_hoodie.png" alt="Neon Dragon Hoodie">
                     <p>Neon Dream</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="2">
-                    <a href="products/product2.php">
+                <div class="product-item" data-product-id="22">
+                    <a href="products/product22.php">
                     <img src="images/cybernetic_pulse_hoodie.png" alt="Cybernetic Sakura Hoodie">
                     <p>Cybernetic Pulse</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="3">
-                    <a href="products/product3.php">
+                <div class="product-item" data-product-id="23">
+                    <a href="products/product23.php">
                     <img src="images/ai_revolution_hoodie.png" alt="AI Tokyo Hoodie">
                     <p>AI Revolution</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="4">
-                    <a href="products/product4.php">
+                <div class="product-item" data-product-id="24">
+                    <a href="products/product24.php">
                     <img src="images/hoodie 1.png" alt="Neon Nomad Hoodie">
                     <p>Neon Nomad Hoodie</p>
                 </a>
                 </div>
             </div>
             <div class="product-grid">
-                <div class="product-item" data-product-id="5">
-                    <a href="products/product5.php">
+                <div class="product-item" data-product-id="25">
+                    <a href="products/product25.php">
                     <img src="images/hoodie 2.png" alt="Matrix Mirage">
                     <p>Matrix Mirage</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="6">
-                    <a href="products/product6.php">
+                <div class="product-item" data-product-id="26">
+                    <a href="products/product26.php">
                     <img src="images/hoodie 3.png" alt="HoloHood Vanguard">
                     <p>HoloHood Vanguard</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="7" >
-                    <a href="products/product7.php">
+                <div class="product-item" data-product-id="27" >
+                    <a href="products/product27.php">
                     <img src="images/hoodie 4.png" alt="CyberCore Cloak">
                     <p>CyberCore Cloak</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="8">
-                    <a href="products/product8.php">
+                <div class="product-item" data-product-id="28">
+                    <a href="products/product28.php">
                     <img src="images/hoodie 5.png" alt="Synthwave Sentry">
                     <p>Synthwave Sentry</p>
                 </a>
                 </div>
             </div>
             <div class="product-grid">
-                <div class="product-item" data-product-id="9" >
-                    <a href="products/product9.php">
+                <div class="product-item" data-product-id="29" >
+                    <a href="products/product29.php">
                     <img src="images/hoodie 6.png" alt="Digital Drifter">
                     <p>Digital Drifter</p>
                 </a>
                 </div>
-                <div class="product-item" data-product-id="10">
-                    <a href="products/product10.php">
+                <div class="product-item" data-product-id="30">
+                    <a href="products/product30.php">
                     <img src="images/hoodie 7.png" alt="Quantum Quester">
                     <p>Quantum Quester</p>
                 </a>

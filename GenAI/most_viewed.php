@@ -10,16 +10,16 @@ if (!isset($_SESSION['userid'])) {
 
 
 $products = [
-    1 => 'Neon Dream',
-    2 => 'Cybernetic Pulse',
-    3 => 'AI Revolution',
-    4 => 'Neon Nomad',
-    5 => 'Matrix Mirage',
-    6 => 'HoloHood Vanguard',
-    7 => 'CyberCore Cloak',
-    8 => 'Synthwave Sentry',
-    9 => 'Digital Drifter',
-    10 => 'Quantum Quester',
+    21 => 'Neon Dream',
+    22 => 'Cybernetic Pulse',
+    23 => 'AI Revolution',
+    24 => 'Neon Nomad',
+    25 => 'Matrix Mirage',
+    26 => 'HoloHood Vanguard',
+    27 => 'CyberCore Cloak',
+    28 => 'Synthwave Sentry',
+    29 => 'Digital Drifter',
+    30 => 'Quantum Quester',
     // ... up to Product 10
 ];
 

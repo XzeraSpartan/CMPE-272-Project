@@ -6,7 +6,7 @@ if (!isset($_SESSION['userid'])) {
     header('Location: /login.php');
     exit();
 }
-$productID = 4;
+$productID = 24;
 
 // MOST VIEWED COOKIE
 
