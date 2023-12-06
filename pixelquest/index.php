@@ -162,7 +162,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     echo "<button class='button' onclick=\"location.href='curl.php';\" style='width: 160px;'>view all users</button><br><br><br>";
   }
   ?>
-  <button class="button" onclick="location.href='register.html';">register</button>
+  <button class="button" onclick="location.href='/register.html';">register</button>
   </div>
 
   <script>
