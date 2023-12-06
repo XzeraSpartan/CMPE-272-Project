@@ -1,6 +1,6 @@
 <?php
 // Include your database connection details
-require_once 'db_connection.php';
+require_once '/db_connection.php';
 
 // Fetch all users from the database
 $sql = "SELECT id, first_name, last_name, email, home_phone, cell_phone, home_address FROM users";
