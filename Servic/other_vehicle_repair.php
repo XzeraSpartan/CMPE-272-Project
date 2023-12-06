@@ -48,4 +48,10 @@
 
     <?php include 'footer.php'; ?>
 </body>
+<script>
+function showReviews() {
+    // Logic to display reviews - this could be a redirection to a new page or a pop-up
+    window.location.href = 'reviews_serv.php?product_id=' + <?php echo $productID; ?>;
+}
+</script>
 </html>

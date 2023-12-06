@@ -48,6 +48,16 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 $mostViewedCookieName = 'global_product_view_count_' . $productID . '_' . md5($_SESSION['userid']);
 $currentCount = isset($_COOKIE[$mostViewedCookieName]) ? intval($_COOKIE[$mostViewedCookieName]) : 0;
 setcookie($mostViewedCookieName, $currentCount + 1, time() + (86400 * 30), "/");
+require_once '../db_connection.php';
+$avgRatingQuery = "SELECT AVG(rating) as average_rating FROM product_reviews_gen WHERE product_id = $productID";
+$avgResult = $link->query($avgRatingQuery);
+
+if ($avgResult) {
+    $avgRow = $avgResult->fetch_assoc();
+    $averageRating = round($avgRow['average_rating'], 1); // Round to one decimal place
+} else {
+    $averageRating = "No Ratings";
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +76,35 @@ setcookie($mostViewedCookieName, $currentCount + 1, time() + (86400 * 30), "/");
 <div class="booking-button-container">
     <a href="#" class="booking-button">Book Now</a>
 </div>
+<h4>Rating: <?php echo $averageRating; ?></h4>
+<button class = "button" onclick="showReviews()">Show Reviews</button>
+    <div class="review-section">
+    <h3>Add Your Review</h3>
+    <form action="submit_review_serv.php" method="post">
+        <input type="hidden" name="product_id" value="<?php echo $productID; ?>">
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+            <option value="5">5 Stars</option>
+            <option value="4">4 Stars</option>
+            <option value="3">3 Stars</option>
+            <option value="2">2 Stars</option>
+            <option value="1">1 Star</option>
+        </select>
+        <br>
+        <label for="review">Review:</label>
+        <br>
+        <textarea name="review" id="review" required></textarea>
+        <br>
+        <button class="button" type="submit">Submit Review</button>
+        <br>
+    </form>
 </div>
     <?php include 'footer.php'; ?>
 </body>
+<script>
+function showReviews() {
+    // Logic to display reviews - this could be a redirection to a new page or a pop-up
+    window.location.href = 'reviews_serv.php?product_id=' + <?php echo $productID; ?>;
+}
+</script>
 </html>
