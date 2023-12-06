@@ -23,7 +23,6 @@ $recentlyViewed = array_slice($recentlyViewed, 0, 5);
 setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"); // Cookie will expire after 30 days
 
 
-
 ?>
 
 <!DOCTYPE html>
