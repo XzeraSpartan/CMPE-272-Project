@@ -29,6 +29,19 @@ $recentlyViewed = array_slice($recentlyViewed, 0, 5);
 // Save the updated list back to the cookie
 setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"); // Cookie will expire after 30 days
 
+// Average Rating 
+// Assuming $productID contains the ID of the current product
+require_once '../../db_connection.php';
+$avgRatingQuery = "SELECT AVG(rating) as average_rating FROM product_reviews WHERE product_id = $productID";
+$avgResult = $link->query($avgRatingQuery);
+
+if ($avgResult) {
+    $avgRow = $avgResult->fetch_assoc();
+    $averageRating = round($avgRow['average_rating'], 1); // Round to one decimal place
+} else {
+    $averageRating = "No Ratings";
+}
+$link->close();
 ?>
 
 <!DOCTYPE html>

@@ -239,7 +239,7 @@ a:hover{
   margin: 20px 0;
 }
 
-.buy-now {
+.button {
   background-color: #ffcd29;
   border: none;
     color: black;
@@ -256,7 +256,7 @@ a:hover{
   transition: background-color 0.3s;
 }
 
-.buy-now:hover {
+.button:hover {
   background-color: #cc9c00;
 }
 
