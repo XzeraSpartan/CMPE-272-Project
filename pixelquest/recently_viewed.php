@@ -36,14 +36,14 @@ $recentlyViewed = isset($_COOKIE[$cookieName]) ? explode(',', $_COOKIE[$cookieNa
 </head>
 <div class="topnav">
     <a href="index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+      <img src="images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Recently Viewed Products</h2>
 </div>
 <ul>
 <?php
 foreach ($recentlyViewed as $productID) {
-    echo '<li><a href="/products/product' . $productID . '.php">' . $products[$productID] . '</a></li>';
+    echo '<li><a href="products/product' . $productID . '.php">' . $products[$productID] . '</a></li>';
 }
 ?>
 </ul>

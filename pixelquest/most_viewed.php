@@ -41,7 +41,7 @@ $top5MostViewed = array_slice($viewCounts, 0, 5, true);
 </head>
 <div class="topnav">
     <a href="index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+      <img src="images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Most Viewed Products</h2>
 </div>
