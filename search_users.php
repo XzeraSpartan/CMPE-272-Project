@@ -13,7 +13,7 @@ if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
   <meta charset="UTF-8">
   <title>Pixel Quest Games Search Users</title>
 
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/pixelquest/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   <style>
       *{
@@ -31,7 +31,7 @@ if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
 <body>
 <div class="topnav">
     <a href="index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+      <img src="images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Search Users</h2>
 </div>

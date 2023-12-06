@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>God of War: Ragnarok</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>God of War: Ragnarok</h2>
 </div>
 <div class="product">
-    <img src="/images/godofwar.jpeg" alt="God of War: Ragnarok Cover Art">
+    <img src="../images/godofwar.jpeg" alt="God of War: Ragnarok Cover Art">
     <h2>God of War: Ragnarok</h2>
     <p>
         Join Kratos and Atreus on a mythic journey for answers before Ragnarök arrives. 

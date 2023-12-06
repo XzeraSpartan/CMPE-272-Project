@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>Elden Ring</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Elden Ring</h2>
 </div>
 <div class="product">
-    <img src="/images/eldenRing.jpeg" alt="Elden Ring Cover Art">
+    <img src="../images/eldenRing.jpeg" alt="Elden Ring Cover Art">
     <h2>Elden Ring</h2>
     <p>The Golden Order has been broken.
     Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.

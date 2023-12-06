@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>Marvel's Spider-Man 2</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Marvel's Spider-Man 2</h2>
 </div>
 <div class="product">
-    <img src="/images/spiderman2.jpeg" alt="Spider-Man 2 Cover Art">
+    <img src="../images/spiderman2.jpeg" alt="Spider-Man 2 Cover Art">
     <h2>Spider-Man 2</h2>
     <p>
     Marvel's Spider-Man 2 is a single player game. But you can play as 

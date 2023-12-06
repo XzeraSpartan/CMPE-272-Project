@@ -28,13 +28,6 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     <br><br>
     <p>The best place to purchase video games online</p>
     <br><br><br>
-    <?php if ($is_logged_in || $is_admin_logged_in): ?>
-        <!-- Display Logout Button for logged-in users -->
-        <button class="button" onclick="location.href='logout.php';">Log out</button>
-    <?php else: ?>
-        <!-- Display Sign In Button for guests -->
-        <button class="button" onclick="location.href='login.php';">Log in</button>
-    <?php endif; ?>
   </div>
 
   <div id="About" class="tabcontent">
@@ -69,19 +62,19 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     <!-- New section for Final Fantasy 16 -->
     <div class="container">
     <section id="featured-product">
-        <a href="/products/product1.php">
+        <a href="products/product1.php">
             <img src="images/finalFantasy16.jpeg" alt="Final Fantasy XVI Cover Thumbnail">
             <h3>Final Fantasy XVI</h3>
         </a>
     </section>
     <section id="featured-product">
-        <a href="/products/product2.php">
+        <a href="products/product2.php">
           <img src="images/spiderman2.jpeg" alt="Spider-Man 2 Cover Thumbnail">
           <h3>Marvel's Spider-Man 2</h3>
         </a>
     </section>
     <section id="featured-product">
-        <a href="/products/product3.php">
+        <a href="products/product3.php">
           <img src="images/godofwar.jpeg" alt="God of War: Ragnarok Cover Thumbnail">
           <h3>God of War: Ragnarok</h3>
         </a>
@@ -90,19 +83,19 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     <br>
     <div class="container">
       <section id="featured-product">
-        <a href="/products/product4.php">
+        <a href="products/product4.php">
         <img src="images/horizon.jpeg" alt="Horizon Forbidden West Cover Thumbnail">
         <h3>Horizon Forbidden West</h3>
       </a>
     </section>
     <section id="featured-product">
-        <a href="/products/product5.php">
+        <a href="products/product5.php">
         <img src="images/persona5r.jpeg" alt="Persona 5 Royal Cover Thumbnail">
         <h3>Persona 5 Royal</h3>
       </a>
     </section>
     <section id="featured-product">
-        <a href="/products/product6.php">
+        <a href="products/product6.php">
         <img src="images/ghostOfTsushima.jpeg" alt="Ghost of Tsushima Cover Thumbnail">
         <h3>Ghost of Tsushima</h3>
       </a>
@@ -111,19 +104,19 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     <br>
     <div class="container">
     <section id="featured-product">
-        <a href="/products/product7.php">
+        <a href="products/product7.php">
         <img src="images/LADG.jpeg" alt="Like a Dragon Gaiden Cover Thumbnail">
         <h3>Like a Dragon Gaiden</h3>
       </a>
     </section>
     <section id="featured-product">
-        <a href="/products/product8.php">
+        <a href="products/product8.php">
         <img src="images/eldenRing.jpeg" alt="Elden Ring Cover Thumbnail">
         <h3>Elden Ring</h3>
       </a>
     </section>
     <section id="featured-product">
-        <a href="/products/product9.php">
+        <a href="products/product9.php">
         <img src="images/jedi.jpeg" alt="Star Wars Jedi: Survivor Cover Thumbnail">
         <h3>Star Wars Jedi: Survivor</h3>
       </a>
@@ -131,7 +124,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     </div>
     <div class="container">
     <section id="featured-product">
-        <a href="/products/product10.php">
+        <a href="products/product10.php">
         <img src="images/lastOfUs2.jpeg" alt="The Last of Us: Part II Cover Thumbnail">
         <h3>The Last of Us: Part II</h3>
       </a>
@@ -165,11 +158,10 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
   <div id="Users" class="tabcontent">
   <?php 
   if ($is_admin_logged_in) {
-    echo "<button class='button' onclick=\"location.href='search_users.php';\" style='width: 160px;'>search users</button><br><br><br>";
+    echo "<button class='button' onclick=\"location.href='/search_users.php';\" style='width: 160px;'>search users</button><br><br><br>";
     echo "<button class='button' onclick=\"location.href='curl.php';\" style='width: 160px;'>view all users</button><br><br><br>";
   }
   ?>
-  <button class="button" onclick="location.href='register.html';">register</button>
   </div>
 
   <script>
@@ -186,7 +178,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
     document.getElementById(pageName).style.display = "block";
 }
 
-// Get the element with id="defaultOpen" and click on it
+// Get the element with id="defaultOpen" and click on it you
     document.getElementById("defaultOpen").click();
   </script>
     

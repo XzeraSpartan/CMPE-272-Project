@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>The Last of Us: Part II</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>The Last of Us: Part II</h2>
 </div>
 <div class="product">
-    <img src="/images/lastOfUs2.jpeg" alt="The Last of Us: Part II Cover Art">
+    <img src="../images/lastOfUs2.jpeg" alt="The Last of Us: Part II Cover Art">
     <h2>The Last of Us: Part II</h2>
     <p> When a violent event disrupts that peace, Ellie embarks on a relentless journey to carry out justice and find closure. 
         As she hunts those 
