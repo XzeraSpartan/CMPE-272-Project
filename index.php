@@ -13,22 +13,24 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
         .header { background-color: #333; color: white; padding: 10px 0; text-align: center; }
         .nav { padding: 15px; background: #444; }
-        .nav button {background-color: #ffcd29;
-    border: none;
-    color: black;
-    font-family: "Arial Rounded MT Bold", sans-serif;
-    font-size: 15px;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    border-radius: 16px;
-    width: 10%;
-    min-width: 100px;
-    height: 40px;
-    transition: background-color 0.3s;
-    display: inline-block;}
+        button {
+                    background-color: #ffcd29;
+                    border: none;
+                    color: black;
+                    font-family: "Arial Rounded MT Bold", sans-serif;
+                    font-size: 15px;
+                    padding: 10px 20px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    cursor: pointer;
+                    border-radius: 16px;
+                    width: 10%;
+                    min-width: 100px;
+                    height: 40px;
+                    transition: background-color 0.3s;
+                    display: inline-block;
+                }
         .main { padding: 20px; }
         .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .footer { background-color: #333; color: white; text-align: center; padding: 10px 0; margin-top: 30px; }
@@ -52,17 +54,17 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
         <div class="card">
             <h2>PixelQuest</h2>
             <p>Description of PixelQuest...</p>
-            <a href="pixelquest/index.php">Visit PixelQuest</a>
+            <button class="button" onclick="location.href='pixelquest/index.php';">PixelQuest</button>
         </div>
         <div class="card">
             <h2>Servic</h2>
             <p>Description of Servic...</p>
-            <a href="servic/index.php">Visit Servic</a>
+            <button class="button" onclick="location.href='Servic/index.php';">Servic</button>
         </div>
         <div class="card">
             <h2>Gen AI Wear</h2>
             <p>Description of Gen AI Wear...</p>
-            <a href="GenAI/index.php">Visit Gen AI Wear</a>
+            <button class="button" onclick="location.href='GenAI/index.php';">GenAI</button>
         </div>
     </div>
     <div class="footer">
