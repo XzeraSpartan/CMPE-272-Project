@@ -29,7 +29,6 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
         <a href="#" onclick="showSection('products')">Products/Services</a>
         <a href="#" onclick="showSection('news')">News</a>
         <a href="#" onclick="showSection('contacts')">Contacts</a>
-        <a href="#" onclick="showSection('register')">Register</a>
         <a href="#" onclick="showSection('search')">Users</a>
     </nav>
 
