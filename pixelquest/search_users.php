@@ -37,7 +37,7 @@ if (!isset($_SESSION['admin_logged_in']) || !$_SESSION['admin_logged_in']) {
 </div>
 <div class="login_wrapper">
     <h1 style="font-family: cursive">Search</h1><br><br>
-    <form action="/search_db.php" method="POST">
+    <form action="search_db.php" method="POST">
     <label><input type="first_name" name="first_name" placeholder="first name"></label>
     <label><input type="last_name" name="last_name" placeholder="last name"></label>
     <label><input type="email" name="email" placeholder="email address"></label>

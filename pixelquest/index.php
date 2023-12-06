@@ -158,7 +158,7 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
   <div id="Users" class="tabcontent">
   <?php 
   if ($is_admin_logged_in) {
-    echo "<button class='button' onclick=\"location.href='search_users.php';\" style='width: 160px;'>search users</button><br><br><br>";
+    echo "<button class='button' onclick=\"location.href='pixelquest/search_users.php';\" style='width: 160px;'>search users</button><br><br><br>";
     echo "<button class='button' onclick=\"location.href='curl.php';\" style='width: 160px;'>view all users</button><br><br><br>";
   }
   ?>
