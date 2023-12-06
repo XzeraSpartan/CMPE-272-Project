@@ -56,7 +56,7 @@ $recentlyViewed = isset($_COOKIE[$cookieName]) ? explode(',', $_COOKIE[$cookieNa
 </head>
 <body>
 <?php include 'header.php'; ?>
-<?php if (isset($_COOKIE['recently_visited'])): ?>
+<?php if (isset($_COOKIE['recently_viewed_' . md5($_SESSION['userid'])])): ?>
 <div class="recently-visited">
 <h2>Most Visited Services</h2>
 <ul>
