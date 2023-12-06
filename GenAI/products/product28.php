@@ -7,7 +7,7 @@ if (!isset($_SESSION['userid'])) {
     exit();
 }
 
-$productID = 8;
+$productID = 28;
 
 // MOST VIEWED COOKIE
 
