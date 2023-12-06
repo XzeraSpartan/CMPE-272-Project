@@ -30,11 +30,6 @@ $is_admin_logged_in = isset($_SESSION['admin_logged_in']) && $_SESSION['admin_lo
         <a href="#" onclick="showSection('news')">News</a>
         <a href="#" onclick="showSection('contacts')">Contacts</a>
         <a href="#" onclick="showSection('register')">Register</a>
-    <?php if ($is_logged_in || $is_admin_logged_in): ?>
-        <a href="#" onclick="showSection('logout')">Logout</a>
-    <?php else: ?>
-        <a href="#" onclick="showSection('login')">Login</a>
-    <?php endif; ?> 
         <a href="#" onclick="showSection('search')">Users</a>
     </nav>
 
