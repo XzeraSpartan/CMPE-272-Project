@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>Like a Dragon Gaiden</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Like a Dragon: Gaiden</h2>
 </div>
 <div class="product">
-    <img src="/images/LADG.jpeg" alt="Like a Dragon Gaiden Cover Art">
+    <img src="../images/LADG.jpeg" alt="Like a Dragon Gaiden Cover Art">
     <h2>Like a Dragon Gaiden</h2>
     <p>Taking place between the events of the titles Yakuza 6: The Song of Life (2016), 
         Yakuza: Like a Dragon (2020) and Like a Dragon: Infinite Wealth (2024), 

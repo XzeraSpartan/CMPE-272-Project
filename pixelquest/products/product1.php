@@ -34,7 +34,7 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>Final Fantasy XVI</Title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
@@ -44,7 +44,7 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
     <h2>Final Fantasy XVI</h2>
 </div>
 <div class="product">
-    <img src="images/finalFantasy16.jpeg" alt="Final Fantasy XVI Cover Art">
+    <img src="../images/finalFantasy16.jpeg" alt="Final Fantasy XVI Cover Art">
     <h2>Final Fantasy XVI</h2>
     <p>Final Fantasy XVI is the latest installment in the long-running Final Fantasy series. Dive into a new world filled with magic, adventure, and intriguing characters!</p>
     <button class="buy-now">Buy Now</button>

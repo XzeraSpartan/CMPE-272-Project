@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>Persona 5 Royal</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Persona 5 Royal</h2>
 </div>
 <div class="product">
-    <img src="/images/persona5r.jpeg" alt="Persona 5 Royal Cover Art">
+    <img src="../images/persona5r.jpeg" alt="Persona 5 Royal Cover Art">
     <h2>Persona 5 Royal</h2>
     <p>Forced to transfer to a high school in Tokyo,
     the protagonist has a strange dream.

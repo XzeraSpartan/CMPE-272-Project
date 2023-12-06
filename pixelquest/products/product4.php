@@ -34,17 +34,17 @@ setcookie($cookieName, implode(',', $recentlyViewed), time() + (86400 * 30), "/"
 <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <Title>Horizon Forbidden West</Title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 <div class="topnav">
-    <a href="/index.php">
-      <img src="/images/logo.png" alt="Pixel Quest Games">
+    <a href="../index.php">
+      <img src="../images/logo.png" alt="Pixel Quest Games">
     </a>
     <h2>Horizon Forbidden West</h2>
 </div>
 <div class="product">
-    <img src="/images/horizon.jpeg" alt="Horizon Forbidden West Cover Art">
+    <img src="../images/horizon.jpeg" alt="Horizon Forbidden West Cover Art">
     <h2>Horizon Forbidden West</h2>
     <p>Horizon Forbidden West continues the story of Aloy half a year after the events of the Zero Dawn, 
         a young huntress of the Nora tribe sent on a quest to a mysterious frontier spanning Utah to the Pacific coast 
