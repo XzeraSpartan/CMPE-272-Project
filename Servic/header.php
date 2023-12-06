@@ -9,5 +9,5 @@
     <a href="news.php">News</a>
     <a href="contact.php">Contact</a>
     <a href="secure.php">Admin Login</a>
-    <a href="register.php">Register</a>
+
 </div>
