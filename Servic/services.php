@@ -113,7 +113,7 @@ foreach ($recentlyViewed as $productID) {
             <a href="washroom_cleaning.php"><img src="images/washroom.png" alt="Washroom Service" class="cardimg"></a>
         </div><div class="service-card">
             <h3>House Cleaning</h3>
-            <a href="house_cleaning.php"><img src="images/HouseCleaning.png" alt="House Cleaning Service" class="cardimg"></a>
+            <a href="house_cleaning.php"><img src="images/Housecleaning.png" alt="House Cleaning Service" class="cardimg"></a>
         </div>
     </div>
 </div>
@@ -152,9 +152,8 @@ foreach ($recentlyViewed as $productID) {
         <div class="service-card">
             <h3>Vehicle AC Repair</h3>
             <a href="vehicle_ac_repair.php"><img src="images/CarAc.png" alt="AC Repair Service" class="cardimg"></a>
-        <div class="service-card">
-            <h3>Other Vehicle Repair</h3>
-            <a href="other_vehicle_repair.php"><img src="images/othervehicleservices.png" alt="Other Service" class="cardimg"></a>
+        
+    
         </div>
     </div>
 </div>
